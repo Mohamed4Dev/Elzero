@@ -7,6 +7,8 @@ Elzero test for learning journey
 ### [JSON](#JSON)
 
 ### JSON
+* using of stringfy and parse methods
+
 ### AJAX
 
 
