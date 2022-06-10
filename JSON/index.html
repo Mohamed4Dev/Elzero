@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON</title>
+  </head>
+  <body>
+    <h1>Hello JSON</h1>
+    <div id="data">
+      <div id="name"></div>
+      <div id="age"></div>
+      <div id="login"></div>
+      <div id="id"></div>
+      <div id="node_id"></div>
+      <div id="avatar_url"></div>
+      <div id="url"></div>
+      <div id="gists_url"></div>
+
+    </div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      // البراوسر(الكلاينت) بيتعامل مع الجافا سكربت اوبجكت
+      // السيرفر عموما بيتعامل مع الجسون
+      //Response الريسبونس بيجى من السيرفر جسون
+      const myJsonObject = '{ "username" : "mohamed", "age" : 26}';
+      const myJsObject = JSON.parse(myJsonObject);
+
+      console.log(myJsonObject);
+      console.log(typeof myJsonObject);
+
+      console.log(myJsObject);
+      console.log(typeof myJsObject);
+
+      //Request الريكوست بيروح للسيرفر جسون
+      const myJsObject_1 = { username: "mohamed", age: 26 };
+      const myJsonObject_1 = JSON.stringify(myJsObject);
+
+      console.log(myJsObject_1);
+      console.log(typeof myJsObject_1);
+
+      console.log(myJsonObject_1);
+      console.log(typeof myJsonObject_1);
+
+      document.getElementById(
+        "name"
+      ).innerHTML = `Your name is ${myJsObject.username}`;
+      document.getElementById(
+        "age"
+      ).innerHTML = `Your age is ${myJsObject.age}`;
+
+      // my github api
+      // https://api.github.com/users/Mohamed4Dev
+
+      //deal with JSON data using getJson method in JQuery library
+      $(function () {
+        $.getJSON("https://api.github.com/users/Mohamed4Dev", function (data) {
+          console.log(data);
+          //   console.log(data.login);
+          //   console.log(data.id);
+          //   console.log(data.node_id);
+          document.getElementById(
+            "login"
+          ).innerHTML = `Your login is ${data.login}`;
+          document.getElementById("id").innerHTML = `Your id is ${data.id}`;
+          document.getElementById(
+            "node_id"
+          ).innerHTML = `Your node_id is ${data.node_id}`;
+        });
+      });
+
+      //deal with JSON data using ajax method in JQuery library
+      $(function () {
+        $.ajax({
+          url: "https://api.github.com/users/Mohamed4Dev",
+          dataType: "json",
+          cache: false,
+          success: function (data, status) {
+            console.log(data);
+            console.log(status);
+            document.getElementById(
+              "avatar_url"
+            ).innerHTML = `Your avatar_url is ${data.avatar_url}`;
+            document.getElementById("url").innerHTML = `Your url is ${data.url}`;
+            document.getElementById(
+              "gists_url"
+            ).innerHTML = `Your gists_url is ${data.gists_url}`;
+          },
+          error: function (xhr, textStatus, err) {
+            console.log(xhr);
+            console.log(textStatus);
+            console.log(err);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
