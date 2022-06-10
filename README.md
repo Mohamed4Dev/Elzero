@@ -7,6 +7,9 @@ Elzero test for learning journey
 ### [JSON](#JSON)
 
 ### JSON
+* applied json using $.getJSON JQuery function
+* applied json using $.ajax JQuery function
+
 ### AJAX
 
 
