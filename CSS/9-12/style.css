@@ -1,0 +1,62 @@
+/* Q1 */
+
+.dv {
+  background-color: #ccc;
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.d1 {
+  border: 5px solid red;
+  outline: black solid 5px;
+}
+
+.d2 {
+  border-color: blue green;
+  border-style: solid;
+  border-width: 5px;
+  outline: black solid 5px;
+}
+
+.d3 {
+  border-color: red green blue yellow;
+  border-style: dashed;
+  border-width: 5px;
+  outline: black solid 5px;
+}
+
+/* Q2 */
+.out {
+  margin-top: 20px;
+  width: 400px;
+  border: 3px solid #1fa195;
+  padding: 2px;
+}
+
+.d4 {
+  border-left: 5px solid #e91e63;
+  padding: 5px;
+  margin: 2px;
+}
+
+.d5 {
+  border-left: 5px solid #e91e63;
+  padding: 5px;
+  margin: 2px;
+  visibility: hidden;
+}
+
+.d6 {
+  border-left: 5px solid #1fa195;
+  padding: 5px;
+  margin: 2px;
+}
+
+.dd {
+  background-color: #ccc;
+  padding: 5px;
+}
+
+.dh{
+  padding: 5px;
+}
