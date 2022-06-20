@@ -1,0 +1,27 @@
+/* Q1 */
+.parent .child .title {
+  color: red;
+}
+
+.parent .title {
+  color: blue;
+}
+
+.title,
+.parent p {
+  color: green;
+}
+
+/* ************** */
+
+/* Q2 */
+
+.assign-2{
+  background-color: brown;
+  height: 40px;
+  margin: 5px;
+  max-width: 400px;
+  width: fit-content;
+  overflow: hidden;
+}
+
