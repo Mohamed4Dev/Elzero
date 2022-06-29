@@ -1,0 +1,46 @@
+/* Q1 */
+h1{
+    text-shadow: 2px 2px  red, 4px 4px blue, 6px 6px purple;
+}
+
+/* Q2 */
+.one{
+    text-transform: uppercase;
+}
+
+.two{
+    text-transform: capitalize;
+}
+
+.three{
+    text-transform: lowercase;
+}
+
+
+/* Q3 */
+div{
+    background-color: #09c;
+    margin: 5px;
+    color: aliceblue;
+    width: 400px;
+    max-width: 400px;
+    padding: 15px;
+}
+
+.d-three{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a{
+    display: inline-block;
+    text-align: center;
+    margin-left: 50%;
+    text-decoration: none;
+    border-bottom:2px solid #00514a;
+    color: white;
+    background-color: #009688;
+    padding: 5px;
+    text-transform: capitalize;
+}
