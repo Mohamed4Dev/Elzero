@@ -1,0 +1,56 @@
+/* Q1 */
+.parent {
+    width: 1000px;
+    height: 350px;
+    background-color: #eee;
+    border: 15px solid #eee;
+    font-weight: bold;
+}
+
+.first,
+.two,
+.three,
+.four {
+    background-color: #09c;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin: 15px;
+}
+
+.three {
+    float: left;
+    width: calc((100% - 90px) / 3);
+}
+
+.two {
+    float: left;
+    width: calc((100% - 60px)/ 2);
+}
+
+.four {
+    float: left;
+    width: calc((100% - 120px)/ 4);
+}
+
+/* Q2 */
+
+.normal, .one-2, .two-2 {
+    margin: 20px auto;
+    width: 300px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 20px;
+    background-color:rgb(238, 238, 238); /* Get The Background From Image */
+    color: black;
+  }
+
+.one-2{
+    background-color: rgba(238, 238, 238, 0.5);
+}
+
+.two-2{
+    opacity: 0.5;
+}
